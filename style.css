@@ -47,3 +47,10 @@
   font-size: 4rem;
   color: #000;
 }
+.vinyl{
+  height: 500px;
+  margin-left: 50px;
+}
+.cassette{
+  height: 600px;
+}
