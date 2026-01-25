@@ -1,0 +1,49 @@
+/*.orange{
+  height: 100px;
+  width: 100px;
+  background-color: #fe6d01;
+}
+.green{
+  height: 100px;
+  width: 100px;
+  background-color: #90e137;
+}
+.pinkish{
+  height: 100px;
+  width: 100px;
+  background-color: #f40290;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Bernoru";
+  src: url("fonts/bernoru-blackultraexpanded.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.page{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-1{
+  background-color: #fe6d01;
+}
+
+.page-2{
+  background-color: #90E137;
+}
+
+.page-3{
+  background-color: #cd1480;
+}
+
+.page h1{
+  font-size: 4rem;
+  color: #000;
+}
