@@ -14,7 +14,7 @@
   background-color: #f40290;
 } */
 *{
-  margin: 0;
+  margin: 0px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -37,6 +37,7 @@
 
 .page-2{
   background-color: #90E137;
+  position: relative;
 }
 
 .page-3{
@@ -51,6 +52,13 @@
   height: 500px;
   margin-left: 50px;
 }
-.cassette{
+/* .cassette{
   height: 600px;
-}
+} */
+.headphones{
+  height: 200px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+ }
+ 
