@@ -14,7 +14,7 @@
   background-color: #f40290;
 } */
 *{
-  margin: 0px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -32,33 +32,60 @@
 }
 
 .page-1{
-  background-color: #fe6d01;
-}
-
-.page-2{
-  background-color: #90E137;
+  background-color: cyan;
+  display: flex;
   position: relative;
 }
-
-.page-3{
-  background-color: #cd1480;
-}
-
 .page h1{
   font-size: 4rem;
   color: #000;
 }
-.vinyl{
-  height: 500px;
-  margin-left: 50px;
+.chill{
+  height: 800px;
+  margin-top: 200px;
 }
-/* .cassette{
-  height: 600px;
-} */
-.headphones{
+.sun{
   height: 200px;
   position: absolute;
   top: -5px;
   right: -10px;
+}
+.page-2{
+  background-color: #90E137;
+  position: relative;
+  z-index: 100;
+}
+.person-floating{
+  height: 200px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.page-3{
+  background-color: #cd1480;
+  display: flex;
+  position: relative;
+}
+
+.vinyl{
+  height: 200px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+.cassette{
+  height: 200px;
+  height: 200px;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+}
+.headphones{
+  height: 200px;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  transform: scaleX(-1);
  }
  
