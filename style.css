@@ -1,22 +1,8 @@
-/*.orange{
-  height: 100px;
-  width: 100px;
-  background-color: #fe6d01;
-}
-.green{
-  height: 100px;
-  width: 100px;
-  background-color: #90e137;
-}
-.pinkish{
-  height: 100px;
-  width: 100px;
-  background-color: #f40290;
-} */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, Arial;
 }
 @font-face {
   font-family: "Bernoru";
@@ -30,7 +16,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .page-1{
   background-color: cyan;
   display: flex;
@@ -49,6 +34,9 @@
   position: absolute;
   top: -5px;
   right: -10px;
+}
+.summer{
+  font-family: jbcursive;
 }
 .page-2{
   background-color: #90E137;
