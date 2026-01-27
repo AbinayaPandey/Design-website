@@ -1,14 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, Arial;
-}
-@font-face {
-  font-family: "Bernoru";
-  src: url("fonts/bernoru-blackultraexpanded.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family:Arial;
+  font-size: 35px;
 }
 .page{
   height: 100vh;
@@ -35,8 +31,8 @@
   top: -5px;
   right: -10px;
 }
-.summer{
-  font-family: jbcursive;
+.summer, .dopamine, .analog-feel{
+  font-family: "Parisienne", cursive;
 }
 .page-2{
   background-color: #90E137;
