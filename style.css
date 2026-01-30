@@ -71,5 +71,126 @@
   top: -5px;
   left: -10px;
   transform: scaleX(-1);
- }
- 
+}
+.music-ui {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+}
+
+.album-row {
+  display: flex;
+  gap: 10px;
+  transition: 0.4s ease;
+}
+
+.album-card {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+  transform-origin: center;
+}
+
+.red { background: #ff2f2f; }
+.green { background: #27d76c; }
+.blue { background: #2f5bff; }
+.pink { background: #ff77c8; }
+
+.play-btn {
+  width: 45px;
+  height: 45px;
+  background: black;
+  clip-path: polygon(25% 15%, 85% 50%, 25% 85%);
+  border: none;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  width: 350px;
+}
+
+.album-card.active {
+  width: 480px;
+  height: 320px;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.album-row.active .album-card:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+.album-card {
+  transform-origin: center;
+}
+
+/* Left card grows to the right */
+.album-card:first-child {
+  transform-origin: left center;
+}
+
+/* Right card grows to the left */
+.album-card:last-child {
+  transform-origin: right center;
+}
+
+/* Middle cards grow from center */
+.album-card:not(:first-child):not(:last-child) {
+  transform-origin: center;
+}
+
+/* Hover expand horizontally */
+.album-card:hover {
+  transform: scaleX(2.6);
+}
+
+/* Click expand both directions */
+.album-card.active {
+  transform: scale(3, 2.4);
+}
+.album-row:hover .album-card {
+  opacity: 0;
+}
+
+.album-row:hover .album-card:hover {
+  opacity: 1;
+}
+.play-btn {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+/* Prevent scaling when parent grows */
+.album-card:hover .play-btn,
+.album-card.active .play-btn {
+  transform: scale(0.38);
+}
+.album-card:hover {
+  width: 100px;
+}
+
+.album-card.active {
+  width: 480px;
+  height: 320px;
+}
+.album-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: 0.4s ease;
+}
+
+.album-card:hover .album-bg {
+  transform: scaleX(2.6);
+}
+
+.album-card.active .album-bg {
+  transform: scale(3, 2.4);
+}
