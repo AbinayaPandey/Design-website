@@ -8,41 +8,177 @@
   font-size: 35px;
 }
 
-.page {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html,
+body {
+  height: 100%;
+  /* overflow-y: scroll;  Allow scrolling */
+  /* scroll-snap-type: y mandatory;  Enable vertical scroll snapping */
+  /* scroll-behavior: smooth; */
 }
 
-.page-1 { background-color: cyan; display: flex; position: relative; }
-.page-2 { background-color: #90E137; position: relative; z-index: 100; }
-.page-3 { background-color: #cd1480; display: flex; position: relative; }
 
-.summer, .dopamine, .analog-feel {
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* scroll-snap-align: start;  Snap to the top of each page */
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  /* Keep animations inside */
+}
+
+.page-1 {
+  background-color: cyan;
+  z-index: 1;
+}
+
+.page-2 {
+  background-color: #90E137;
+  z-index: 2;
+}
+
+.page-3 {
+  background-color: #cd1480;
+  z-index: 3;
+}
+
+.summer,
+.dopamine,
+.analog-feel {
   font-family: "Parisienne", Arial;
 }
 
-.chill {
-  height: 800px;
-  margin-top: 200px;
-}
-
-.sun, .person-floating, .vinyl {
+/* --- Decoration Images --- */
+.sun,
+.person-floating,
+.vinyl {
   height: 200px;
   position: absolute;
-  top: -5px;
-  right: -10px;
+  top: 20px;
+  right: 20px;
 }
 
-.cassette, .headphones {
+.cassette,
+.headphones {
   height: 200px;
   position: absolute;
-  top: -5px;
-  left: -10px;
+  top: 20px;
+  left: 20px;
 }
 
 .headphones {
   transform: scaleX(-1);
 }
 
+.music-vibes,
+.summer-vibes,
+.analog-music {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 20px;
+}
+
+/* --- Interactive Music Player (4 Expanding Squares) --- */
+.music-player-container {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  gap: 0;
+  /* margin-top: 20px; */
+  position: absolute;
+  /* top: 820px; */
+  /* 20px (headphones top) + 200px (headphones height) + 600px (gap) */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.album-card {
+  flex: 1;
+  /* Default state: all equal width */
+  height: 100px;
+  position: relative;
+  transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Smooth expansion */
+  cursor: pointer;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: #333;
+  /* Fallback dark background */
+  overflow: hidden;
+  /* Hide overflow for the text animation */
+}
+
+.album-art {
+  height: 100%;
+  width: 100%;
+  /* Initially fills the square */
+  object-fit: cover;
+  flex-shrink: 0;
+  /* Prevent image from squishing */
+  transition: width 0.5s ease;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.3s ease 0.1s;
+  /* Slight delay for opacity */
+}
+
+.song-title {
+  color: white;
+  /* font-size: 0.6rem; */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.artist-name {
+  color: #ccc;
+  /* font-size: 0.9rem; */
+  font-size: 12px;
+}
+
+/* Hover Effect: Expand hovered item */
+.album-card:hover {
+  flex: 3;
+}
+
+.album-card:hover .card-info {
+  opacity: 1;
+  width: auto;
+  /* Take up remaining space */
+}
+
+/* Adjust image on hover if needed, but flex:3 handles the card growth */
+/* We want the image to stay roughly square-ish or just occupy the left side */
+.album-card:hover .album-art {
+  width: 100px;
+  /* Keep image square-like on expand */
+}
+
+
+
+/* Play Button Styling */
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 35px solid black;
+  /* The triangle */
+  pointer-events: none;
+  /* Let clicks pass through if needed */
+  z-index: 2;
+}

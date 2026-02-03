@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wesite with cool design</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <section class="page page-1">
-        <h1>Chill</h1>
-        <!-- <img class="chill" src="images/chill.png" alt="Wiggly word chill"> -->
-        <img src="images/sun.png" alt="Sun chilling" class="sun">
-        <p class="summer-vibes">Time slows down. Bare skin glows. Golden light lingers. Air feels heavy. Fireflies blink softly. That's what <span class="summer">summer</span> means to me.</p>
-      </section>
 
-      <section class="page page-2">
-        <h1>Mucis</h1>
-        <img class="headphones" src="images/headphones.png" alt="headphones">
-        <img src="images/person-floating.png" alt="person floating while listening to music" class="person-floating">
-        <p class="music-vibes">Music lowers cortisol levels while triggering the release of feel-good chemicals like <span class="dopamine">dopamine</span>. This process naturally slows your heart rate and reduces physiological tension.</p>
-        <div class="headphone-div"></div>
-      </section>
+<head>
+  <title>Wesite with cool design</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      <section class="page page-3">
-        <h1>Vinyl</h1>
-        <br>
-        <img class="vinyl" src="images/vinyl-player.png" alt="vynil player">
-        <img src="images/cassette.png" alt="cassette" class="cassette">
-        <p class="analog-music">Listening to music on analog devices feels  <span class="analog-feel">warmer and natural</span> because the sound flows smoothly and carries small imperfections that make it feel alive.</p>
-      </section>
+<body>
+  <section class="page page-1">
+    <h1>Chill</h1>
+    <script src="script.js"></script>
+    <!-- <img class="chill" src="images/chill.png" alt="Wiggly word chill"> -->
+    <img src="images/sun.png" alt="Sun chilling" class="sun">
+    <p class="summer-vibes">Time slows down. Bare skin glows. Golden light lingers. Air feels heavy. Fireflies blink
+      softly. That's what <span class="summer">summer</span> means to me.</p>
+  </section>
 
-      <section class="music-ui">
-        <div class="album-row">
+  <section class="page page-2">
+    <h1>Music</h1>
+    <!-- Decoration images -->
+    <img class="headphones" src="images/headphones.png" alt="headphones">
+    <img src="images/person-floating.png" alt="person floating while listening to music" class="person-floating">
 
-          <div class="album-card red">
-            <div class="album-bg"></div>
-            <!-- <button class="play-btn"></button> 
-            <audio controls>
-              <source src="audio/On and on.mp3">
-            </audio>  -->
-          </div>
+    <p class="music-vibes">Music lowers cortisol levels while triggering the release of feel-good chemicals like <span
+        class="dopamine">dopamine</span>. This process naturally slows your heart rate and reduces physiological
+      tension.</p>
 
-          <div class="album-card green">
-            <div class="album-bg"></div>
-            <!-- <button class="play-btn"></button>
-            <audio controls>
-              <source src="audio/On and on.mp3">
-            </audio>  -->
-          </div>
-
-          <div class="album-card blue">
-            <div class="album-bg"></div>
-            <!-- <button class="play-btn"></button>
-            <audio controls>
-              <source src="audio/On and on.mp3">
-            </audio>  -->
-          </div>
-
-          <div class="album-card pink">
-            <div class="album-bg"></div>
-            <!-- <button class="play-btn"></button> 
-            <audio controls>
-              <source src="audio/On and on.mp3">
-            </audio>  -->
-          </div>
-
+    <!-- Interactive Music Player Section -->
+    <div class="music-player-container">
+      <div class="album-card">
+        <img src="images/albums/Wonderlust.jpg" class="album-art" alt="Song 1 Art">
+        <div class="card-info">
+          <span class="song-title">Wonderlust</span>
+          <span class="artist-name">Will Post</span>
         </div>
-        <!-- <audio controls src="audio/On and on.mp3"></audio> -->
+        <div class="play-icon"></div>
+        <audio id="audio-1" src="audio/Will Post - Wonderlust.mp3"></audio>
+      </div>
+      <div class="album-card">
+        <img src="images/albums/I Do I Do.jpg" class="album-art" alt="Song 2 Art">
+        <div class="card-info">
+          <span class="song-title">I Do I Do</span>
+          <span class="artist-name">Charlie Mars</span>
+        </div>
+        <div class="play-icon"></div>
+        <audio id="audio-2" src="audio/I Do I Do   Charlie Mars.mp3"></audio>
+      </div>
+      <div class="album-card">
+        <img src="images/albums/End of begining.jpg" class="album-art" alt="Song 3 Art">
+        <div class="card-info">
+          <span class="song-title">End of begining</span>
+          <span class="artist-name">Djo</span>
+        </div>
+        <div class="play-icon"></div>
+        <audio id="audio-3" src="audio/End of begining.mp3"></audio>
+      </div>
+      <div class="album-card">
+        <img src="images/albums/The Both of Us.jpg" class="album-art" alt="Song 4 Art">
+        <div class="card-info">
+          <span class="song-title">The Both of Us</span>
+          <span class="artist-name">House Of Lords</span>
+        </div>
+        <div class="play-icon"></div>
+        <audio id="audio-4" src="audio/House Of Lords - The Both of Us.mp3"></audio>
+      </div>
+    </div>
+  </section>
 
-    </section>
-    <audio>
-      <source src="audio/On and on.mp3">
-    </audio>
+  <section class="page page-3">
+    <h1>Vinyl</h1>
+    <br>
+    <img class="vinyl" src="images/vinyl-player.png" alt="vynil player">
+    <img src="images/cassette.png" alt="cassette" class="cassette">
+    <p class="analog-music">Listening to music on analog devices feels <span class="analog-feel">warmer and
+        natural</span> because the sound flows smoothly and carries small imperfections that make it feel alive.</p>
+  </section>
+</body>
 
-<!-- <script src="script.js"></script> -->
-
-
-  </body>
 </html>
-
