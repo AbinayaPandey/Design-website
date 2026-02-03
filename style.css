@@ -103,7 +103,8 @@ body {
   /* Default state: all equal width */
   height: 100px;
   position: relative;
-  transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  /* transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1); */
+  transition: flex 0.5s ease;
   /* Smooth expansion */
   cursor: pointer;
   display: flex;
@@ -132,7 +133,9 @@ body {
   padding-left: 20px;
   /* white-space: nowrap;  Allowed wrapping */
   opacity: 0;
-  width: 0;
+  width: 120px;
+  flex-shrink: 0;
+  /* Fixed width for stable wrapping */
   transition: opacity 0.3s ease 0.1s;
   /* Slight delay for opacity */
 }
@@ -154,13 +157,12 @@ body {
 
 /* Hover Effect: Expand hovered item */
 .album-card:hover {
-  flex: 3;
+  flex: 4;
 }
 
 .album-card:hover .card-info {
   opacity: 1;
-  width: auto;
-  /* Take up remaining space */
+  /* width: auto; Removed to keep text layout stable */
 }
 
 /* Adjust image on hover if needed, but flex:3 handles the card growth */
@@ -168,19 +170,4 @@ body {
 .album-card:hover .album-art {
   width: 100px;
   /* Keep image square-like on expand */
-}
-
-
-
-/* Play Button Styling */
-.play-icon {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 35px solid black;
-  /* The triangle */
-  pointer-events: none;
-  /* Let clicks pass through if needed */
-  z-index: 2;
 }
