@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -117,12 +118,11 @@ body {
 
 .album-art {
   height: 100%;
-  width: 100%;
+  width: 100px;
   /* Initially fills the square */
   object-fit: cover;
   flex-shrink: 0;
   /* Prevent image from squishing */
-  transition: width 0.5s ease;
 }
 
 .card-info {
@@ -130,7 +130,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-left: 20px;
-  white-space: nowrap;
+  /* white-space: nowrap;  Allowed wrapping */
   opacity: 0;
   width: 0;
   transition: opacity 0.3s ease 0.1s;
@@ -142,12 +142,14 @@ body {
   /* font-size: 0.6rem; */
   font-size: 15px;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 .artist-name {
   color: #ccc;
   /* font-size: 0.9rem; */
   font-size: 12px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Hover Effect: Expand hovered item */
